@@ -1,0 +1,114 @@
+@import '../../vars.css';
+
+.Login{
+    /** center a div be like*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    /***********/
+    width: 400px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 .3rem .5rem var(--color-secondary);
+    
+}
+
+.Login h1{
+    font-size: 40px;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid silver;
+    color:var(--color-primary) ;
+}
+.Login form {
+    padding: 0 35px;
+}
+
+form .field{
+    
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 25px 0;   
+}
+
+.field input{
+    width: 100%; /* username yahbat l ta7ta */
+    padding: 0 5px;
+    height: 40px;
+    font-size: 14px;
+    border: none; /* yrou7 l cadre nt3 input */
+    background: none;
+    outline: none;
+}
+
+.field label{ /** tat7rk bi nisba li perent*/
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 14px;
+    pointer-events: none;
+    transition: .5s;
+    
+
+}
+
+
+.field span::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 40px; /*height: input;*/
+    bottom: -2px; 
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: .5s;
+}
+
+.field input:focus ~ label,
+.field input:valid ~ label{
+    top: -5px;
+    color: var(--color-primary);
+    
+}
+.field input:focus ~ span::before,
+.field input:valid ~ span::before{
+    width: 100%;
+}
+
+
+input[type="submit"]{
+    width: 100%;
+    height: 45px;
+    border: 1px solid;
+    background:var(--color-primary);
+    border-radius: 20px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+input[type="submit"]:hover{
+    border-color: var(--color-primaryTow);
+    transition: .5s;
+
+}
+.signup{
+    margin: 18px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+
+}
+.signup a{
+    color: #2691d9;
+    text-decoration: none;
+}
+.signup a:hover{
+    text-decoration: underline;
+}
+
